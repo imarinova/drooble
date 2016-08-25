@@ -1,0 +1,51 @@
+{
+  "name": "drooble",
+  "version": "1.0.0",
+  "description": "Drooble task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imarinova/drooble.git"
+  },
+  "author": "irina marinova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imarinova/drooble/issues"
+  },
+  "homepage": "https://github.com/imarinova/drooble#readme",
+  "devDependencies": {
+    "browser-sync": "^2.14.0",
+    "browserify": "^13.1.0",
+    "browserify-shim": "^3.8.12",
+    "font-awesome": "^4.6.3",
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.1.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "jquery": "^3.1.0",
+    "knockout": "^3.4.0",
+    "mediaelement": "^2.22.0",
+    "moment": "^2.14.1",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.7.0"
+  },
+  "browser": {
+    "melement": "../drooble/node_modules/mediaelement/build/mediaelement-and-player.js"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "melement": {
+      "exports": "melement",
+      "depends": [
+        "jquery"
+      ]
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.ui-tab {
+	li {
+		display: inline-block;
+
+		a {
+			text-transform: uppercase;
+			color:#b4b4b4;
+			padding: 0 20px 9px 0;
+			display: block;
+			position: relative;
+			text-shadow: 0 0 1px #dfdfdf;
+
+
+			&:hover, &.active {
+				color:#555555;
+
+				&:after {
+					content: '';
+					width: 0; 
+					height: 0; 
+					border-left: 5px solid transparent;
+					border-right: 5px solid transparent;
+					border-bottom: 5px solid #efefed;
+					position: absolute;
+	    			right: calc(~"50% + 5px"); 
+	    			bottom: 0;
+				}
+			}
+		}
+	}
+} 

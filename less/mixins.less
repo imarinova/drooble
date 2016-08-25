@@ -1,0 +1,22 @@
+
+.border-r-not-0 (@a, @b, @c, @d) {
+      -webkit-border-radius: @a @b @c @d;
+       -moz-border-radius: @a @b @c @d;
+            border-radius: @a @b @c @d;
+}
+.border-radius(@r) when (isnumber(@r)) {
+    -webkit-border-radius: @r;
+       -moz-border-radius: @r;
+            border-radius: @r;
+}
+
+.button-color(@background, @border, @background-hover, @border-hover) {
+    background: @background;
+    border-color: @border;
+
+    &:hover {
+        background-color: @background-hover;
+        border-color: @border-hover;
+        color: @btn-hover-color;
+    }
+}

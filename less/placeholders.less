@@ -1,0 +1,40 @@
+
+// Placeholders //
+@input-placeholder-color :  #b6b6b6;
+@input-disable-color     :  #b8bbc0;
+
+.placehoder() {
+	color: @input-placeholder-color;
+    font-size: 18px;
+    font-style: italic;
+    text-shadow: 0 1px 0 #ededed;
+}
+
+::-webkit-input-placeholder {
+    .placehoder();
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    .placehoder();
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+    .placehoder();
+}
+
+:-ms-input-placeholder {
+    .placehoder();
+}
+
+input:disabled::-webkit-input-placeholder { /* WebKit browsers */
+   color: @input-disable-color;
+}
+input:disabled:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: @input-disable-color;
+}
+input:disabled::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: @input-disable-color;
+}
+input:disabled:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: @input-disable-color;
+}
